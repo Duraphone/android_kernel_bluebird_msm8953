@@ -2,6 +2,10 @@ dtb-$(CONFIG_ARCH_QCOM)	+= apq8016-sbc.dtb msm8916-mtp.dtb
 dtb-$(CONFIG_ARCH_QCOM)	+= msm8996-mtp.dtb
 dtb-$(CONFIG_ARCH_QCOM)	+= apq8096-db820c.dtb
 
+ifeq ($(CONFIG_MACH_BLUEBIRD_MSM8953),y)
+dtb-$(CONFIG_MACH_BLUEBIRD_MSM8953_EF501) += msm8953-ef501.dtb
+endif
+
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 	dtbo-$(CONFIG_ARCH_SDM845) += \
 		sdm845-cdp-overlay.dtbo \
